@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Book Me</h1>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            debugger
+            $.getJSON('/Home/GetAllHotels', function (data) {
+                debugger
+                let tableBody = '';
+                data.forEach(user => {
+                    debugger
+                    tableBody += `<tr>
+
+                                        <td width="120"><img width="112" height="73" src="${user.imageUrl}"  alt="${user.name}"></td>
+                                        <td><a href="/Home/HotelDetais/${user.id}">${user.name}</a></td>
+                                        <td>${user.location}</td>
+                                        <td>${user.rating}</td>
+                                        <td>${user.DateofTravel} </td>
+                                        <td>${user.boardBasis}</td>
+                                        <td>${user.rooms[0]["roomType"]} $${user.rooms[0]["amount"]}
+                                                     <br>
+                                             ${user.rooms[1]["roomType"]}
+                                             $${user.rooms[1]["amount"]}
+
+
+                                         </td>
+
+
+
+
+                                    </tr>`;
+                });
+                        //.error(function (data) { })
+                
+                $('#hotel tbody').html(tableBody);
+            });
+        });
+    </script>
+}
+
+<div class="container mt-4">
+
+    <table id="hotel" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>image</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Rating</th>
+                <th>Travel Date</th>
+                <th>Board Basis</th>
+
+
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+
+
+
+
+

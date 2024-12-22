@@ -1,0 +1,158 @@
+[
+
+  {
+    "id": 1,
+    "name": "Seaside Paradise",
+    "location": "Maldives",
+    "rating": 4.9,
+    "imageUrl": "/Images/OIP.jpg",
+    "datesOfTravel": [ "2024-01-01", "2024-01-07" ],
+    "boardBasis": "All Inclusive",
+    "rooms": [
+      {
+        "roomType": "Deluxe Suite",
+        "amount": 5
+      },
+      {
+        "roomType": "Family Room",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Ravis",
+    "location": "India",
+    "rating": 7.9,
+    "imageUrl": "/Images/01.jpg",
+    "datesOfTravel": [ "2024-01-01", "2024-01-07" ],
+    "boardBasis": "All Inclusive",
+    "rooms": [
+      {
+        "roomType": "Deluxe Suite",
+        "amount": 5
+      },
+      {
+        "roomType": "Family Room",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Kilkea Castle",
+    "location": "Ireland",
+    "rating": 7.9,
+    "imageUrl": "/Images/02.jpg",
+    "datesOfTravel": [ "2024-01-01", "2024-01-07" ],
+    "boardBasis": "All Inclusive",
+    "rooms": [
+      {
+        "roomType": "Deluxe Suite",
+        "amount": 5
+      },
+      {
+        "roomType": "Family Room",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Carton House",
+    "location": "Ireland",
+    "rating": 7.9,
+    "imageUrl": "/Images/03.jpg",
+    "datesOfTravel": [ "2024-01-01", "2024-01-07" ],
+    "boardBasis": "All Inclusive",
+    "rooms": [
+      {
+        "roomType": "Deluxe Suite",
+        "amount": 5
+      },
+      {
+        "roomType": "Family Room",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "The Heritage",
+    "location": "Ireland",
+    "rating": 6.9,
+    "imageUrl": "/Images/04.jpg",
+    "datesOfTravel": [ "2024-01-01", "2024-01-07" ],
+    "boardBasis": "All Inclusive",
+    "rooms": [
+      {
+        "roomType": "Deluxe Suite",
+        "amount": 5
+      },
+      {
+        "roomType": "Family Room",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "The Heritage",
+    "location": "Ireland",
+    "rating": 6.9,
+    "imageUrl": "/Images/05.jpg",
+    "datesOfTravel": [ "2024-01-01", "2024-01-07" ],
+    "boardBasis": "All Inclusive",
+    "rooms": [
+      {
+        "roomType": "Deluxe Suite",
+        "amount": 5
+      },
+      {
+        "roomType": "Family Room",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Kilashee Hotel",
+    "location": "Ireland",
+    "rating": 6.9,
+    "imageUrl": "/Images/06.jpg",
+    "datesOfTravel": [ "2024-01-01", "2024-01-07" ],
+    "boardBasis": "All Inclusive",
+    "rooms": [
+      {
+        "roomType": "Deluxe Suite",
+        "amount": 5
+      },
+      {
+        "roomType": "Family Room",
+        "amount": 3
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "The Shelbourne",
+    "location": "usa",
+    "rating": 6.9,
+    "imageUrl": "/Images/07.jpg",
+    "datesOfTravel": [ "2024-01-01", "2024-01-07" ],
+    "boardBasis": "All Inclusive",
+    "rooms": [
+      {
+        "roomType": "Deluxe Suite",
+        "amount": 5
+      },
+      {
+        "roomType": "Family Room",
+        "amount": 3
+      }
+    ]
+  }
+
+
+
+]

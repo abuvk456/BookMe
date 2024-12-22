@@ -1,0 +1,83 @@
+﻿@model BookMeModel.GridItem
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+            .card button:hover {
+                opacity: 0.7;
+            }
+
+        p{
+            text-align:left;
+        }
+        h1{
+             text-align: start;
+            font-size: revert;
+        }
+
+        .checked {
+            color: orange;
+        }
+    </style>
+</head>
+<div class="card">
+    <img src="@Html.DisplayFor(model => model.ImageUrl)" alt="" style="width:100%">
+    <h1>@Html.DisplayFor(model => model.Name)</h1>
+    <p >@Html.DisplayFor(model => model.location)</p>
+    @foreach (var row in Model.rooms)
+    {
+        <p>@row.RoomType: $@row.amount</p>
+       
+    }
+    <div>
+        <dl class="row">
+            <dt style="width:inherit" class="col-sm-2">
+                Travel date:
+            </dt>
+            <dd class="col-sm-7">
+                @foreach (var row in Model.datesOfTravel)
+                {
+                    @row 
+
+                }
+            </dd>
+    </dl>
+    </div>
+
+    
+    
+    <p>@Html.DisplayFor(model => model.BoardBasis)</p>   
+    <p>Dates :@Html.DisplayFor(model => model.DateofTravel)</p>
+    <p>@Html.DisplayFor(model => model.rating) <i class="fa fa-star checked"></i></p>
+   
+    <p><button>Book Now</button></p>
+</div>
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Home">Back to List</a>
+</div>

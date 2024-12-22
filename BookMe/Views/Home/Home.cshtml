@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Book Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/csstemplate/style.css">
+
+</head>
+
+<body>
+	<section class="ftco-section">
+		<div class="container">
+            <div style="margin-top:-77px;" class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Book Me</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table  id="hotel" class="table table-responsive-xl">
+							<thead>
+								<tr>
+                                    <th width="500">&nbsp;</th>
+									@*<th>Name</th>
+									<th>Location</th>
+									<th>Rating</th>*@
+									<th>Travel Date</th>
+									<th>Board Basis</th>
+									<th>&nbsp;</th>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/popper.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/main.js"></script>
+
+
+</body>
+
+
+</html>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            debugger
+            $.getJSON('/Home/GetAllHotels', function (data) {
+                debugger
+                let tableBody = '';
+                data.forEach(user => {
+                    debugger
+					tableBody += `<tr class="alert" role="alert">
+
+                                                        <td  class="d-flex align-items-center" width="500">
+
+                                                                <div class="img" style="background-image: url(${user.imageUrl});width: 133px;height: 178px;"></div>
+                                                                        <div class="pl-3 email">
+                                                                                <span><a href="/Home/Details/${user.id}">${user.name}</a></span>
+                                                                                <span>${user.location}<span>
+                                                                                                <span  >${user.rating} <i class="fa fa-star checked"></i> </span>
+
+                                                                                  
+
+                                                                        </div>
+														</td>
+
+                                                        <td>${user.dateofTravel} </td>
+                                                        <td>${user.boardBasis}</td>
+                                                        <td>${user.rooms[0]["roomType"]} $${user.rooms[0]["amount"]}
+                                                                     <br>
+                                                             ${user.rooms[1]["roomType"]}
+                                                             $${user.rooms[1]["amount"]}
+
+
+                                                         </td>
+                                                    </tr>`;
+                });
+                //.error(function (data) { })
+
+                $('#hotel tbody').html(tableBody);
+            });
+        });
+    </script>
+}
